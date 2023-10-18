@@ -37,7 +37,7 @@ class Training:
     )
 
     self.valid_generator = valid_datagenerator.flow_from_directory(
-        directory=self.config.training_data,
+        directory=self.config.validation_data,
         shuffle=False,
         **dataflow_kwargs
     )
@@ -53,7 +53,7 @@ class Training:
     )   
 
     self.train_generator = train_datagenerator.flow_from_directory(
-        directory=self.config.validation_data,
+        directory=self.config.training_data,
         shuffle=True,
         **dataflow_kwargs
     )  

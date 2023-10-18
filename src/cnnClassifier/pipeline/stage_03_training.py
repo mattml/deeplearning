@@ -3,7 +3,7 @@ from cnnClassifier.components.prepare_callbacks import PrepareCallbacks
 from cnnClassifier.components.training  import Training
 from cnnClassifier import logger
 
-STAGE_NAME="Training STAGE"
+STAGE_NAME="Model Training Stage"
 
 class ModelTrainingPipeline:
   
@@ -28,10 +28,11 @@ class ModelTrainingPipeline:
     
 if __name__ == "__main__":
   try:
-    logger.info(f"{STAGE_NAME} started.")
+    logger.info(f">>>>>> {STAGE_NAME} started. <<<<<<")
     obj = ModelTrainingPipeline()
     obj.main()
-    logger.info(f"{STAGE_NAME} completed successfully!")
+    logger.info(f">>>>>> {STAGE_NAME} completed successfully! <<<<<<")
   except Exception as e:
     logger.info(f"{STAGE_NAME} failed: {e}")# logger.error(f"{STAGE_NAME} failed: {e}") # logger.exception(e)
     raise e
+  
