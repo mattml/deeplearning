@@ -162,4 +162,4 @@ cython_debug/
 artifacts/*
 ztemp/*
 mlruns/*
-test.py
+trials.py
