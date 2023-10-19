@@ -96,11 +96,17 @@ class ConfigurationManager:
   
   
   def get_evaluation_config(self) ->EvaluationConfig:
+    config=self.config.evaluation
+    
     eva_config=EvaluationConfig(
-    path_of_model=Path("artifacts/training/model.h5"),
-    validation_data=Path("artifacts/data_ingestion/Chicken-fecal-images/validation/"),
+    path_of_model=Path(config.path_of_model),
+    validation_data=Path(config.validation_data),
     all_params=self.params,
     params_batch_size=self.params.BATCH_SIZE,
-    params_image_size=self.params.IMAGE_SIZE
+    params_image_size=self.params.IMAGE_SIZE,
+    mlflow_repository=config.mlflow_repository,
+    mlflow_username=config.mlflow_username,
+    mlflow_pass=config.mlflow_pass,
+    mlflow_uri=config.mlflow_uri
     )
     return eva_config

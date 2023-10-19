@@ -15,8 +15,12 @@ class ModelEvaluationPipeline:
     config_manmager=ConfigurationManager()
     evaluation_config=config_manmager.get_evaluation_config()
     evaluation=Evaluation(evaluation_config)
-    evaluation.evaluation()
-    evaluation.save_model_evaluation_score()
+    # evaluation.load_model()
+    evaluation.evaluation() #加载模型，创建数据生成器，评估，保存分数
+    # evaluation.save_model_score()
+    evaluation.log_into_mlflow() # 评估日志发送到mlflow平台
+    
+   
     
     
     

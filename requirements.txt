@@ -3,8 +3,8 @@ pandas
 dvc
 notebook
 numpy
-matplotlib
-seaborn
+# matplotlib
+# seaborn
 python-box==6.0.2
 pyYAML
 tqdm
@@ -14,4 +14,7 @@ types-PyYAML
 scipy
 Flask
 Flask-Cors
+pillow
+mlflow
+dagshub
 -e .

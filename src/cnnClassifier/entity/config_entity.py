@@ -46,4 +46,8 @@ class EvaluationConfig:
   validation_data: Path
   all_params: dict
   params_batch_size:int
-  params_image_size:list  
+  params_image_size:list
+  mlflow_repository: str
+  mlflow_username:str
+  mlflow_pass:str
+  mlflow_uri:str  
