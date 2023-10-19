@@ -54,15 +54,3 @@ except Exception as e:
   logger.info(f"{STAGE_NAME} failed: {e}")# logger.error(f"{STAGE_NAME} failed: {e}")# logger.exception(e)
   raise e
 
-
-
-# STAGE_NAME="PREPARE CALLBACKS STAGE"
-
-# try:
-#   logger.info(f">>>>>> {STAGE_NAME} started. <<<<<<")
-#   prepare_callbacks_training_pipeline = PrepareCallbacksTrainingPipeline()
-#   prepare_callbacks_training_pipeline.main()
-#   logger.info(f">>>>>> {STAGE_NAME} completed successfully! <<<<<<\n\n")
-# except Exception as e:
-#   logger.info(f"{STAGE_NAME} failed: {e}")# logger.error(f"{STAGE_NAME} failed: {e}")# logger.exception(e)
-#   raise e
